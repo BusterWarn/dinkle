@@ -46,29 +46,55 @@ body {
 	margin: 0 auto;
 }
 
+/*----------Navigation----------*/
+.navigation {
+    height: 100px;
+    background-color: #C47745;
+}
 
 /*----------Main----------*/
 .main {
-	background: #C47745;
-	min-height: 400px;
+	background: url(../src/eichenwalde.png);
+	height: 1080px;
 	text-align: center;
 }
 
-.main .container .row .col-md-4,
+.main .whitebc {
+    padding-top: 20px;
+    margin: 0;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+}
+
+.main .container .row p,
+.main .container .row a {
+	font-size: 40px;
+    overflow: visible;
+}
+
+.main * {
+    color: #090D12;
+}
+
+.main h1 {
+	font-size: 70px;
+    margin: 0 0 100px 0;
+}
+
+.main h2 {
+    font-size: 50px;
+    color: #555659;
+}
+
+.main .container .row .col-md-4 {
+    border-left: 8px solid #555659;
+    text-align: right;
+}
+
 .main .container .row .col-md-8 {
-	border: 1px solid #fff;
-}
-
-.main .container h1 {
-	margin: 0;
-	padding: 30px;
-	font-size: 50px;
-	color: #fff;
-}
-
-.main .container p {
-	font-size: 30px;
-	color: #fff;
+    margin-top: 200px;
+    text-align: right;
+    border-right: 8px solid #555659;
 }
 
 /*----------Ticket----------*/
@@ -82,8 +108,8 @@ body {
 
 .ticket .container {
 	padding-top: 10px;
-	border-top: 3px #C47745 solid;
-	border-bottom: 3px #C47745 solid;
+	border-top: 3px #FFF solid;
+	border-bottom: 3px #FFF solid;
 }
 
 .ticket .container * {
@@ -155,6 +181,7 @@ body {
 	background: #C47745;
 	min-height: 400px;
 	text-align: center;
+    padding: 200px 0;
 }
 
 .about .container h1 {
@@ -170,25 +197,34 @@ body {
 }
 /*----------Rooms----------*/
 .rooms {
-	min-height: 400px;
-	background-color: #557EBB;
+	min-height: 700px;
+	background: url(../src/bc.jpg);
+	background-size: cover;
+	background-attachment: fixed;
 	padding: 10px 0;
 }
 
+.rooms .container {
+    width: 90%;
+}
+
 .rooms .room {
-	margin: 10px 0;
+    min-height: 400px;
+	margin: 10px 0 50px 0;
 	width: 100%;
-	background-color: rgba(196,119,69,0.6);
+	background-color: rgba(255,255,255,0.8);
+    border: 1px solid white;
 }
 
 .rooms .room .imug {
 	width: 100%;
-	height: 280px;
+	height: 720px;
 	overflow: hidden;
 }
 
 .rooms .room img {
 	width: 100%;
+    margin-top: -10%;
 }
 
 .hidden {
@@ -196,9 +232,8 @@ body {
 }
 
 .rooms .room h1 {
-	margin: 10px 40px;
 	display: inline-block;
-	font-family: pixel;
+    padding: 0 0 30px 0;
 }
 
 .rooms .room ul li {
