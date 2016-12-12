@@ -3,8 +3,6 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<title>Dinkle's Bondage Basement</title>
-		<script src="scripts/jquery-3.1.1.min.js"></script>
-		<script src="scripts/main.js"></script>
 	</head>
 	<body>
 		<div class="wrap">
@@ -15,8 +13,8 @@ Header-->
 					<img src="src\logo.png" />
 				</div>
 			</div><!--
-Navigation-->
-            <div class="navigation">
+Navbar header-->
+            <div class="nav" id="nav-header">
                 <div class="container">
                     
                 </div>
@@ -30,7 +28,7 @@ Main-->
                             <div class="col-md-4">
                                 <p class="pull-left">"How to Dinkle?"</p>
                                 <p class="pull-right">"We know how to Dinkle"
-                                <br><it>- Dr.Dinkle</it></p>
+                                <br><i>- Dr.Dinkle</i></p>
                             </div>
                             <div class="col-md-8">
                                 <p>Here at Dinkle's Bondage Basement,<br>we really know how to Dinkle.<br><br>We offer the the dankest memes, the funniest games and the coziest couches. And Believe me, I know couches!</p>
@@ -40,16 +38,38 @@ Main-->
 				    </div>
                 </div>
 			</div><!--
+Navbar Display--><div class="nav" id="nav-display">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-4 col-centered">
+								<button id="btn-left" class="btn">left</button>
+							</div>
+							<div class="col-xs-4 col-centered">
+								<ul>
+									<li><span class="indicator"></span></li>
+									<li><span class="indicator active"></span></li>
+									<li><span class="indicator"></span></li>
+									<li><span class="indicator"></span></li>
+									<li><span class="indicator"></span></li>
+								</ul>
+							</div>
+							<div class="col-xs-4 col-centered">
+								<button id="btn-right" class="btn">Right</button>
+							</div>
+						</div>
+					</div>
+				</div><!--
 Display-->
 			<div class="display">
 				<div class="container">
-					<figure>
-						<img src="src\display\display1.jpg">
-						<img src="src\display\display2.jpg">
-						<img src="src\display\display3.jpg">
-						<img src="src\display\display4.jpg">
-						<img src="src\display\display5.jpg">
-					</figure>
+					<ul class="slides">
+						<li class="slide"><img src="src\display\display1.jpg"></li>
+						<li class="slide"><img src="src\display\display2.jpg"></li>
+						<li class="slide"><img src="src\display\display3.jpg"></li>
+						<li class="slide"><img src="src\display\display4.jpg"></li>
+						<li class="slide"><img src="src\display\display5.jpg"></li>
+						<li class="slide"><img src="src\display\display1.jpg"></li>
+					</ul>
 				</div>
 			</div><!--
 Ticket-->
@@ -175,5 +195,7 @@ Footer-->
 				<p>&copy; Dinkle Lawfirm</p>
 			</div>
 		</div>
+		<script src="scripts/jquery-3.1.1.min.js"></script>
+		<script src="scripts/main.js"></script>
 	</body>
 </html>
