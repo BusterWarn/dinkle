@@ -4,11 +4,7 @@
 	second: #C47745 / rgba(196,119,69,0.8);
 */
 
-html {
-	height: 100%;
-}
-
-body {
+html, body {
 	height: 100%;
 }
 
