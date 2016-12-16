@@ -27,7 +27,6 @@ html, body {
 	width: 970px;
 }
 
-
 /*----------Header----------*/
 .header {
 	background: url(../src/bc.jpg);
@@ -98,6 +97,7 @@ html, body {
 #nav-display .container {
 	margin: 10px auto 0 auto;
 	width: 970px;
+	transition: all 1s linear;
 }
 
 #nav-display .container .row .col-centered {
@@ -105,9 +105,27 @@ html, body {
 }
 
 #nav-display .container .row .col-centered .btn {
+	background-color: transparent;
 	display: block;
 	margin: 0 auto;
 	float: none;
+	padding: 0;
+}
+
+#nav-display .container .row .col-centered .btn span {
+	transition: color 0.2s;
+}
+
+#nav-display .container .row .col-centered .btn span:hover {
+	color: #FFE466;
+}
+
+#nav-display .container .row .col-centered .btn:focus {
+	outline: none;
+}
+
+#nav-display .container .row .col-centered .btn:active {
+	box-shadow: none;
 }
 
 #nav-display .container .row .col-centered ul {
@@ -137,7 +155,8 @@ html, body {
 }
 
 #nav-display .active {
-	background-color: #FFFFFF;
+	background-color: white;
+	transition: all 1s linear;
 }
 /*----------Display----------*/
 .display {
@@ -150,6 +169,7 @@ html, body {
 	overflow: hidden;
 	height: 400px;
 	width: 970px;
+	transition: all 0.3s;
 }
 
 .display .container .slides {
@@ -166,6 +186,10 @@ html, body {
 
 .display .container .slides .slide img {
 	max-width: 970px;
+}
+
+.boxShadow {
+	box-shadow: 40px 0 100px rgba(0,0,0, 0.3), -40px 0 100px rgba(0,0,0, 0.3);
 }
 
 /*----------Ticket----------*/
@@ -351,6 +375,17 @@ html, body {
 	display: inline-block;
 	float: right;
 	color: #fff;
+}
+
+/*----------Glyphicons----------*/
+.arrow {
+	color: #FFFFFF;
+	font-size: 2em;
+}
+
+.targeted {
+	color: #FFE466;
+	font-size: 2em;
 }
 
 @font-face {

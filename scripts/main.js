@@ -30,7 +30,9 @@ var main = function() {
     //Functions
     
     var startSlide = function () {
+		removeBoxShadow();
 		interval = setInterval(function() {
+			
 			$slides.animate({'margin-left': '-=' + $slideWidth}, slideSpeed, function() {
 				currentSlide++
                 console.log(currentSlide);
@@ -46,6 +48,7 @@ var main = function() {
     
     var stopSlide = function () {
         clearInterval(interval);
+		addBoxShadow();
     };
     
     var slideLeft = function() {
@@ -67,18 +70,16 @@ var main = function() {
     
     var slideRight = function() {
         $rightButton.click(function() {
-            if (currentSlide < $slide.length) {
-                $slides.animate({'margin-left': '-=' + $slideWidth}, slideSpeed, function() {
-                    currentSlide++
+				$slides.animate({'margin-left': '-=' + $slideWidth}, slideSpeed, function() {
+				currentSlide++
+                console.log(currentSlide);
+                indicate();
+				if (currentSlide >= $slide.length) {
+					$slides.css('margin-left', 0);
+					currentSlide = 1;
                     indicate();
-                });
-            } else {
-                $slides.css('margin-left', 0);
-                currentSlide = 1;
-                $slides.animate({'margin-left': '-=' + $slideWidth}, slideSpeed, function() {
-                    currentSlide++
-                });  
-            };
+				};
+			});
         });
     };
     
@@ -116,6 +117,14 @@ var main = function() {
             $indicatorUl.find('#indicator1').addClass('active');
         };
     };
+	
+	var addBoxShadow = function() {
+		$displayContainer.addClass('boxShadow');
+	};
+	
+	var removeBoxShadow = function() {
+		$displayContainer.removeClass('boxShadow');
+	};
     
     //Setup
     console.log($slide.length);
