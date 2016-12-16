@@ -1,6 +1,8 @@
 var main = function() {
 	
 	//DOM
+	var $width = $(window).width();
+	
 	var $display = $('.display');
 	var $displayContainer = $display.find('.container');
 	var $slides = $displayContainer.find('.slides');
@@ -35,7 +37,6 @@ var main = function() {
 			
 			$slides.animate({'margin-left': '-=' + $slideWidth}, slideSpeed, function() {
 				currentSlide++
-                console.log(currentSlide);
                 indicate();
 				if (currentSlide >= $slide.length) {
 					$slides.css('margin-left', 0);
@@ -72,7 +73,6 @@ var main = function() {
         $rightButton.click(function() {
 				$slides.animate({'margin-left': '-=' + $slideWidth}, slideSpeed, function() {
 				currentSlide++
-                console.log(currentSlide);
                 indicate();
 				if (currentSlide >= $slide.length) {
 					$slides.css('margin-left', 0);
@@ -125,10 +125,15 @@ var main = function() {
 	var removeBoxShadow = function() {
 		$displayContainer.removeClass('boxShadow');
 	};
+	
+	var screenAdjust = function() {
+		if ($width < 1080) {
+			alert("pizza!");
+		};
+	};
     
     //Setup
-    console.log($slide.length);
-    startSlide();
+	startSlide();
 	$display.on('mouseenter', stopSlide).on('mouseleave',startSlide);
 	$navDisplay.on('mouseenter', stopSlide).on('mouseleave',startSlide);
     slideLeft();
